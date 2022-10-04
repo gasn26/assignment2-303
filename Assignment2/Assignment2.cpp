@@ -2,6 +2,8 @@
 #include <vector>
 
 #include "Arrays.h"
+#include "Professional.h"
+#include "Nonprofessional.h"
 
 int main() {
 	/* 
@@ -34,4 +36,17 @@ int main() {
 	 *		End Part 1
 	 */
 
+
+	/*
+	 *		Test code for Part 2 (Inheritance)
+	 */
+	Professional don("2389hf3", "Don", "Johnson", 500, 5000, 14);
+	std::cout << don.calculateHealthcareContribution() << std::endl;
+
+	Nonprofessional jack("sdfj83k", "Jack", "Harlow", 400, 20, 36);
+	std::cout << jack.calculateHealthcareContribution() << std::endl;
+
+	/*
+	 *		End Part 1
+	 */
 }

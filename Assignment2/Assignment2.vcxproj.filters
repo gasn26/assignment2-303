@@ -21,9 +21,24 @@
     <ClCompile Include="Arrays.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Professional.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Nonprofessional.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Arrays.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Employee.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Professional.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Nonprofessional.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

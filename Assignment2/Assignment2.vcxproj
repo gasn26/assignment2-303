@@ -129,9 +129,14 @@
   <ItemGroup>
     <ClCompile Include="Arrays.cpp" />
     <ClCompile Include="Assignment2.cpp" />
+    <ClCompile Include="Nonprofessional.cpp" />
+    <ClCompile Include="Professional.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Arrays.h" />
+    <ClInclude Include="Employee.h" />
+    <ClInclude Include="Nonprofessional.h" />
+    <ClInclude Include="Professional.h" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="arrays.txt" />
