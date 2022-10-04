@@ -5,23 +5,28 @@
 using namespace std;
 
 
-int find(int n, int* arr, int size) {
+int find(int* arr, int size, int n) {
+	if (size < 0)
+		throw invalid_argument("Invalid size");
+
 	for (int i = 0; i < size; i++)
 		if (arr[i] == n) return i;
 	return -1;
 }
 
-int replace(int index, int n, int* arr) {
-	if (index < 0) {
+int replace(int* arr, int index, int n) {
+	if (index < 0)
 		throw invalid_argument("Index not in range");
-	}
 
 	int x = arr[index];
 	arr[index] = n;
 	return x;
 }
 
-void add(int n, int*& arr, int size) {
+int add(int*& arr, int size, int n) {
+	if (size < 0)
+		throw invalid_argument("Invalid size");
+
 	int* oldArr = arr;		// point at given array
 
 	arr = new int[size + 1];	// create new array with one extra element
@@ -32,9 +37,13 @@ void add(int n, int*& arr, int size) {
 	arr[size] = n;	// add last element
 
 	delete[] oldArr; // deallocate old array
+
+	return size + 1;
 }
 
-void remove(int index, int*& arr, int size) {
+int remove(int*& arr, int size, int index) {
+	if (size < 0)
+		throw invalid_argument("Invalid size");
 	if (index < 0 || index >= size)
 		throw invalid_argument("Index " + to_string(index) + " not in range 0.." + to_string(size));
 
@@ -50,4 +59,6 @@ void remove(int index, int*& arr, int size) {
 	}
 
 	delete[] oldArr;	// deallocate old array
+
+	return size - 1;
 }
